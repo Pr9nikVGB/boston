@@ -9,22 +9,28 @@
   "author": "WebDesign Master",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
     "browser-sync": "^2.26.7",
     "del": "^4.1.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
-    "gulp-cache": "^1.1.1",
+    "gulp-cache": "^1.1.3",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
-    "gulp-file-include": "^2.0.1",
+    "gulp-file-include": "^2.1.0",
     "gulp-imagemin": "^5.0.3",
     "gulp-rename": "^1.4.0",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.0.2",
     "gulp-uglifyjs": "^0.6.2",
     "imagemin-pngquant": "^7.0.0"
+  },
+  "dependencies": {
+    "browserslist": "^4.7.2",
+    "caniuse-lite": "^1.0.30001004",
+    "gulp-print": "^5.0.2",
+    "gulp-sourcemaps": "^2.6.5"
   }
 }

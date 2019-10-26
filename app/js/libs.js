@@ -1,4 +1,4 @@
 // 1.JQuery
 
 
-@@include('../libs/jquery/dist/jquery.min.js');
+@@include('../libs/jquery.min.js');

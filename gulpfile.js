@@ -8,33 +8,37 @@ var gulp = require('gulp'), // Подключаем Gulp
 	imagemin = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
 	pngquant = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
 	cache = require('gulp-cache'), // Подключаем библиотеку кеширования
+	concat = require('gulp-concat'), // Подключаем библиотеку конкатенирования
+	sourcemaps = require('gulp-sourcemaps'),
+ 	print = require('gulp-print'),
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 babel = require('gulp-babel'); // Babel
 include = require('gulp-file-include'); // Библиотека для инклюда файлов
 
-gulp.task('sass', function () { // Создаем таск Sass
+gulp.task('sass', async function () { // Создаем таск Sass
 	return gulp.src('app/sass/*.scss') // Берем источник
+		.pipe(sourcemaps.init())
+		.pipe(concat('all.css'))
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
-		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
+		.pipe(autoprefixer({
+			browsers: ['> 0.1%'],
+			cascade: false
+		}))
 		.pipe(gulp.dest('build/css')) // Выгружаем результата в папку build/css
 		.pipe(cssnano()) // Сжимаем
 		.pipe(rename({ suffix: '.min' })) // Добавляем суффикс .min
+		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('build/css')) // Выгружаем результата в папку build/css
 		.pipe(browserSync.reload({
 			stream: true
-		})) // Обновляем CSS на странице при изменении
+		}))
 });
 
-gulp.task('browser-sync', function () { // Создаем таск browser-sync
-	browserSync({ // Выполняем browserSync
-		server: { // Определяем параметры сервера
-			baseDir: 'build' // Директория для сервера - build
-		},
-		notify: false // Отключаем уведомления
-	});
+gulp.task('browser-sync', async function () { // Создаем таск browser-sync
+
 });
 
-gulp.task('scripts-libs', function () {
+gulp.task('scripts-libs', async function () {
 	return gulp.src([ // Берем все необходимые библиотеки
 		'app/js/libs.js', // Берем файл с библиотеками
 	])
@@ -49,7 +53,7 @@ gulp.task('scripts-libs', function () {
 		.pipe(browserSync.reload({ stream: true }))
 });
 
-gulp.task('scripts', function () {
+gulp.task('scripts', async function () {
 	return gulp.src([ // Берем все необходимые файлы js и исключаем файл с библиотеками
 		'app/js/*', '!app/js/libs.js'
 	])
@@ -61,23 +65,31 @@ gulp.task('scripts', function () {
 		.pipe(browserSync.reload({ stream: true }))
 });
 
-gulp.task('clean', function () {
+gulp.task('clean', async function () {
 	return del.sync('build'); // Удаляем папку build перед сборкой
 });
 
-gulp.task('img', function () {
+gulp.task('img', async  function () {
 	return gulp.src('app/img/**/*') // Берем все изображения из app
 		.pipe(cache(imagemin({ // С кешированием
-			// .pipe(imagemin({ // Сжимаем изображения без кеширования
 			interlaced: true,
 			progressive: true,
 			svgoPlugins: [{ removeViewBox: false }],
 			use: [pngquant()]
-		}))/**/)
-		.pipe(gulp.dest('build/img')); // Выгружаем на продакшен
+		})))
+		.pipe(gulp.dest('build/img'))
 });
+function html () {
+	return gulp.src(['app/*.html'])
+		.pipe(include({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.pipe(gulp.dest('build'))
+		.pipe(browserSync.reload({ stream: true }))
+}
 
-gulp.task('html', function () {
+gulp.task('html', async function () {
 	return gulp.src(['app/*.html'])
 		.pipe(include({
 			prefix: '@@',
@@ -87,16 +99,18 @@ gulp.task('html', function () {
 		.pipe(browserSync.reload({ stream: true }))
 })
 
-// gulp.task('clear', function (callback) {
-// 	return cache.clearAll();
-// });
+gulp.task('build',gulp.series('clean','html', 'img', 'sass', 'scripts', 'scripts-libs'));
 
-gulp.task('build', ['clean', 'html', 'sass', 'scripts', 'scripts-libs', 'img'])
-
-gulp.task('watch', ['browser-sync', 'build'], function () {
-	gulp.watch("app/sass/*.scss", ['sass']).on('change', browserSync.reload); // Наблюдение за SCSS файлами в корне проекта
-	gulp.watch('app/*.html', ['html'], browserSync.reload); // Наблюдение за HTML файлами в корне проекта
-	gulp.watch(['app/js/*.js'], ['scripts-libs', 'scripts'], browserSync.reload);   // Наблюдение за JS файлами в папке js
+gulp.task('watch', async function () {
+	browserSync.init({
+		server: { // Определяем параметры сервера
+			baseDir: 'build' // Директория для сервера - build
+		},
+	});
+	gulp.series('build');
+	gulp.watch('app/**/**.html', gulp.series('html')).on('change', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
+	gulp.watch("app/sass/*.scss", gulp.series('sass')).on('change', browserSync.reload); // Наблюдение за SCSS файлами в корне проекта
+	gulp.watch('app/js/*.js',  gulp.series('scripts-libs', 'scripts'), browserSync.reload);   // Наблюдение за JS файлами в папке js
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', gulp.series('watch', function () {}));
