@@ -1,0 +1,42 @@
+.c-top-panel {
+  width: 100%;
+  background-color: #040404;
+  color: #fff;
+  mix-blend-mode: normal;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  &__wrapper {
+    height: 85px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 19px;
+    display: block;
+  }
+  &__contact {
+
+  }
+  &__phone {
+    display: inline-block;
+    vertical-align: top;
+    width: 28px;
+    height: 28px;
+    background-image: url("../img/icons/phone.svg");
+    background-size: cover;
+  }
+  &__number {
+    font-size: 24px;
+    line-height: 21px;
+    font-weight: bold;
+  }
+}

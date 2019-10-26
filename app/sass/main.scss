@@ -1,3 +1,78 @@
+@mixin backImage($position, $size, $repeat) {
+	background-position: $position;
+	background-size: $size;
+	background-repeat: $repeat;
+}
+@mixin border($borderTop, $borderRight, $borderBottom, $borderLeft) {
+	border-top: $borderTop;
+	border-left: $borderLeft;
+	border-right: $borderRight;
+	border-bottom: $borderBottom;
+}
+@mixin input-placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+[type='checkbox'], [type='file'] {
+	display: none;
+}
+html {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	min-height: 100%;
+	font-size: 100%;
+}
 body {
-	background: rgb(216, 47, 47);
+	margin: 0;
+	font-family: 'Exo 2.0';
+
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin: 0;
+}
+.clearfix {
+	content: "";
+	display: table;
+	clear: both;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	transition: all ease-out .2s;
+	&:hover, &:active {
+		text-decoration: none;
+	}
+}
+.m-l-30 {
+	margin-left: 30px;
+}
+.m-l-20 {
+	margin-left: 20px;
+}
+.m-l-15 {
+	margin-left: 15px;
+}
+.m-l-5 {
+	margin-left: 5px;
+}
+.t-bold {
+	font-weight: bold;
+}
+.icon-middle {
+	display: inline-block;
+	vertical-align: middle;
+}
+button {
+	cursor: pointer;
+}
+.l-container {
+	display: inline-block;
+	vertical-align: top;
 }

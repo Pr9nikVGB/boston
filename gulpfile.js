@@ -10,13 +10,14 @@ var gulp = require('gulp'), // Подключаем Gulp
 	cache = require('gulp-cache'), // Подключаем библиотеку кеширования
 	concat = require('gulp-concat'), // Подключаем библиотеку конкатенирования
 	sourcemaps = require('gulp-sourcemaps'),
- 	print = require('gulp-print'),
+	plumber = require('gulp-plumber'),
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 babel = require('gulp-babel'); // Babel
 include = require('gulp-file-include'); // Библиотека для инклюда файлов
 
 gulp.task('sass', async function () { // Создаем таск Sass
-	return gulp.src('app/sass/*.scss') // Берем источник
+	return gulp.src('app/sass/**/*.scss') // Берем источник
+		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(concat('all.css'))
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
@@ -34,14 +35,11 @@ gulp.task('sass', async function () { // Создаем таск Sass
 		}))
 });
 
-gulp.task('browser-sync', async function () { // Создаем таск browser-sync
-
-});
-
 gulp.task('scripts-libs', async function () {
 	return gulp.src([ // Берем все необходимые библиотеки
 		'app/js/libs.js', // Берем файл с библиотеками
 	])
+		.pipe(plumber())
 		.pipe(include({ // Инклюдим библиотеки
 			prefix: '@@',
 			basepath: '@file'
@@ -57,6 +55,7 @@ gulp.task('scripts', async function () {
 	return gulp.src([ // Берем все необходимые файлы js и исключаем файл с библиотеками
 		'app/js/*', '!app/js/libs.js'
 	])
+		.pipe(plumber())
 		.pipe(gulp.dest('build/js')) // Выгружаем в папку build/js
 		.pipe(browserSync.reload({ stream: true }))
 		.pipe(uglify()) // Сжимаем JS файл
@@ -69,8 +68,9 @@ gulp.task('clean', async function () {
 	return del.sync('build'); // Удаляем папку build перед сборкой
 });
 
-gulp.task('img', async  function () {
+gulp.task('img', async function () {
 	return gulp.src('app/img/**/*') // Берем все изображения из app
+		.pipe(plumber())
 		.pipe(cache(imagemin({ // С кешированием
 			interlaced: true,
 			progressive: true,
@@ -81,6 +81,7 @@ gulp.task('img', async  function () {
 });
 function html () {
 	return gulp.src(['app/*.html'])
+		.pipe(plumber())
 		.pipe(include({
 			prefix: '@@',
 			basepath: '@file'
@@ -91,6 +92,7 @@ function html () {
 
 gulp.task('html', async function () {
 	return gulp.src(['app/*.html'])
+		.pipe(plumber())
 		.pipe(include({
 			prefix: '@@',
 			basepath: '@file'
@@ -99,7 +101,12 @@ gulp.task('html', async function () {
 		.pipe(browserSync.reload({ stream: true }))
 })
 
-gulp.task('build',gulp.series('clean','html', 'img', 'sass', 'scripts', 'scripts-libs'));
+gulp.task('transferFonts', async function (cb) {
+	return gulp.src(['app/fonts/*'])
+		.pipe(gulp.dest('build/fonts'));
+    cb();
+})
+gulp.task('build',gulp.series('clean','html', 'img', 'sass', 'scripts', 'scripts-libs', 'transferFonts'));
 
 gulp.task('watch', async function () {
 	browserSync.init({
@@ -109,7 +116,7 @@ gulp.task('watch', async function () {
 	});
 	gulp.series('build');
 	gulp.watch('app/**/**.html', gulp.series('html')).on('change', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
-	gulp.watch("app/sass/*.scss", gulp.series('sass')).on('change', browserSync.reload); // Наблюдение за SCSS файлами в корне проекта
+	gulp.watch("app/sass/**/*.scss", gulp.series('sass')).on('change', browserSync.reload); // Наблюдение за SCSS файлами в корне проекта
 	gulp.watch('app/js/*.js',  gulp.series('scripts-libs', 'scripts'), browserSync.reload);   // Наблюдение за JS файлами в папке js
 });
 

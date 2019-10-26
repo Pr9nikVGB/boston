@@ -1,0 +1,14 @@
+.c-icons {
+  font-size: 0;
+  &__icon {
+    width: 46px;
+    padding: 11px 0;
+    line-height: 0;
+    display: inline-block;
+    text-align: center;
+    font-size: 27px;
+    &--red {
+      background-color: #D0021B;
+    }
+  }
+}
