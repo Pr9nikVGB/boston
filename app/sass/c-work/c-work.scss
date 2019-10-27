@@ -1,0 +1,29 @@
+.c-work {
+  width: 25%;
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  &:hover {
+    .c-work__wrapper {
+      display: block;
+    }
+  }
+  &__wrapper {
+    display: none;
+    color: #FFFFFF;
+    background-color: rgba(220, 5, 5, 0.85);
+    padding: 40px 25px 20px 25px;
+    text-align: left;
+    height: 100%;
+  }
+  &__title,
+  &__text {
+    padding-bottom: 25px;
+  }
+  &__list {
+    padding-left: 18px;
+    padding-bottom: 25px;
+  }
+}

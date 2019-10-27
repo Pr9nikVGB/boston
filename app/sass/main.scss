@@ -90,6 +90,9 @@ button {
 	font-style: italic;
 	padding-top: 50px;
 	position: relative;
+	&--white {
+		color: #FFFFFF;
+	}
 	&::after {
 		content: '';
 		display: block;
@@ -97,7 +100,7 @@ button {
 		height: 3px;
 		left: 0;
 		right: 0;
-		margin: 15px auto 0 auto;
+		margin: 25px auto 0 auto;
 		background-color: #D0021B;
 	}
 

@@ -1,0 +1,49 @@
+.c-choice {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 818px;
+  text-align: center;
+  margin-top: 40px;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1175px;
+    margin: 0 auto;
+    padding-top: 115px;
+    padding-left: 95px;
+    counter-reset: headings;
+  }
+  &__item {
+    width: 33.3%;
+    height: 170px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    line-height: 36px;
+    color: #FFFFFF;
+    text-align: left;
+    margin-bottom: 85px;
+    padding-top: 115px;
+  }
+
+  &__text {
+    max-width: 220px;
+    counter-increment: headings;
+    position: relative;
+    &::before {
+      content: "0"counter(headings); // отображение счётчика
+      position: absolute;
+      top: -4px;
+      left: -55px;
+      font-size: 35px;
+      font-weight: 500;
+      line-height: 42px;
+      color: #FFFFFF;
+      mix-blend-mode: normal;
+      opacity: 0.18;
+    }
+  }
+}

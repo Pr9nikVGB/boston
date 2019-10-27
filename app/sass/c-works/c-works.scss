@@ -1,0 +1,9 @@
+.c-works {
+  text-align: center;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+  }
+}

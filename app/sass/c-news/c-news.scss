@@ -1,0 +1,43 @@
+.c-news {
+  text-align: center;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 60px 0 50px 0;
+  }
+  &__item {
+    width: 380px;
+    height: 475px;
+    position: relative;
+    text-align: left;
+  }
+  &__image {
+    height: 305px;
+  }
+  &__mark {
+    display: block;
+    position: absolute;
+    top: 255px;
+    left: 30px;
+    background-color: #D0021B;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 5px;
+  }
+  &__title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &__description {
+    padding: 20px 60px 20px 30px;
+    border-left: 1px solid #DFDFDF;
+    border-right: 1px solid #DFDFDF;
+    border-bottom: 1px solid #DFDFDF;
+  }
+}
