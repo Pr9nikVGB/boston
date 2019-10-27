@@ -1,0 +1,23 @@
+.c-bullets {
+  position: absolute;
+  bottom: 45px;
+  width: 100%;
+  text-align: center;
+  &__wrapper {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+    &--active {
+      background-color: #D0021B;
+    }
+  }
+}

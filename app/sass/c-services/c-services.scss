@@ -1,0 +1,35 @@
+.c-services {
+  text-align: center;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__button {
+    width: 320px;
+    background-color: #D0021B;
+    height: 60px;
+    font-size: 18px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 60px;
+    &-text {
+      display: inline-block;
+      vertical-align: middle;
+      padding-right: 20px;
+    }
+    &-icon {
+      display: inline-block;
+      width: 30px;
+      height: 38px;
+      background-image: url("/img/price_icon.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+    }
+  }
+}

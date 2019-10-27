@@ -1,0 +1,27 @@
+.c-nav {
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #fff;
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+  }
+  &__item {
+    position: relative;
+    cursor: pointer;
+    &:hover{
+      .c-nav__caret:before{
+        content: "\f0d7";
+      }
+      .c-nav__drop-menu {
+        display: block;
+      }
+    }
+  }
+  &__caret {
+    margin-left: 8px;
+  }
+}

@@ -20,17 +20,96 @@
 		</div>
 	</div>
 </div>
-<header class="c-header">
-	<div class="c-header__wrapper">
-		<img src="img/logo.png" class="c-header__logo">
-		<nav class="c-header__nav c-nav">
-			<ul class="c-nav__list">
-				<li class="c-nav__item">Дейтелинг</li>
-				<li class="c-nav__item">Услуги</li>
-				<li class="c-nav__item">Новости</li>
-				<li class="c-nav__item">Контакты</li>
+<div class="c-main-slider">
+	<header class="c-header">
+		<div class="c-header__wrapper">
+			<img class="c-header__logo" src="img/logo.png" >
+			<nav class="c-header__nav c-nav">
+				<div class="c-nav__list">
+					<div class="c-nav__item"><a class="c-nav__link">Дейтелинг</a></div>
+					<div class="c-nav__item m-l-85">
+						<a class="c-nav__link c-nav__link--parent">Услуги</a><i class="fas fa-caret-up c-nav__caret col-red"></i>
+						<ul class="c-nav__drop-menu c-drop-menu">
+							<li class="c-drop-menu__item c-drop-menu__item--active">Полировка</li>
+							<li class="c-drop-menu__item">Керамика</li>
+							<li class="c-drop-menu__item">Антигравийная пленка</li>
+							<li class="c-drop-menu__item">Химчистка</li>
+							<li class="c-drop-menu__item">Стайлинг</li>
+							<li class="c-drop-menu__item">Тонировка</li>
+						</ul>
+					</div>
+					<div class="c-nav__item m-l-85"><a class="c-nav__link">Новости</a></div>
+					<div class="c-nav__item m-l-85"><a class="c-nav__link">Контакты</a></div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<div class="c-main-slider__wrapper">
+		<div class="c-main-slider__slide c-slide" style="background-image: url('/img/main_foto.jpg')">
+			<div class="c-slide__wrapper">
+				<div class="c-slide__arrows">
+					<span class="c-slide__arrow c-slide__arrow--left c-slide__arrow--disable"></span>
+					<span class="c-slide__arrow c-slide__arrow--right"></span>
+				</div>
+				<h2 class="c-slide__title">Заголовок на видео</h2>
+				<p class="c-slide__text">Небольшой текстовый блок с описанием в несколько строчек</p>
+			</div>
+		</div>
+		<div class="c-bullets">
+			<ul class="c-bullets__wrapper">
+				<li class="c-bullets__bullet c-bullets__bullet--active"></li>
+				<li class="c-bullets__bullet"></li>
+				<li class="c-bullets__bullet"></li>
 			</ul>
-		</nav>
+		</div>
 	</div>
-</header>
+</div>
+<section class="c-services">
+	<h3 class="page-title">Наши услуги</h3>
+	<div class="l-section c-services__wrapper l-section--limited">
+		<div class="c-services__item c-service">
+			<img class="c-service__image" src="/img/s1.png" alt="">
+			<div class="c-service__wrapper c-service__wrapper--active">
+				<h4 class="c-service__title">Полировка</h4>
+				<p class="c-service__text">Небольшое текстовое описание в несколько строчек</p>
+			</div>
+		</div>
+		<div class="c-services__item c-service">
+			<img class="c-service__image" src="/img/s2.png" alt="">
+			<div class="c-service__wrapper">
+				<h4 class="c-service__title">Керамика</h4>
+				<p class="c-service__text">Небольшое текстовое описание в несколько строчек</p>
+			</div>
+		</div>
+		<div class="c-services__item c-service">
+			<img class="c-service__image" src="/img/s3.png" alt="">
+			<div class="c-service__wrapper">
+				<h4 class="c-service__title">Антигравийная<br>пленка</h4>
+				<p class="c-service__text">Небольшое текстовое описание в несколько строчек</p>
+			</div>
+		</div>
+		<div class="c-services__item c-service">
+			<img class="c-service__image" src="/img/s4.png" alt="">
+			<div class="c-service__wrapper">
+				<h4 class="c-service__title">Химчистка</h4>
+				<p class="c-service__text">Небольшое текстовое описание в несколько строчек</p>
+			</div>
+		</div>
+		<div class="c-services__item c-service">
+			<img class="c-service__image" src="/img/s5.png" alt="">
+			<div class="c-service__wrapper">
+				<h4 class="c-service__title">Тонировка</h4>
+				<p class="c-service__text">Небольшое текстовое описание в несколько строчек</p>
+			</div>
+		</div>
+		<div class="c-services__item c-service">
+			<img class="c-service__image" src="/img/s6.png" alt="">
+			<div class="c-service__wrapper">
+				<h4 class="c-service__title">Стайлинг</h4>
+				<p class="c-service__text">Небольшое текстовое описание в несколько строчек</p>
+			</div>
+		</div>
+	</div>
+	<a class="c-services__button" href="" download><span class="c-services__button-text">Посмотреть прайс</span><span class="c-services__button-icon"></span></a>
+</section>
 @@include('./template/footer.html')

@@ -1,5 +1,17 @@
 .c-header {
-  background-color: #000000;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  padding-top: 20px;
+  &__wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &__logo {
   }
 }

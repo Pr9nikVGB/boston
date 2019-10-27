@@ -50,6 +50,9 @@ a {
 		text-decoration: none;
 	}
 }
+.m-l-85 {
+	margin-left: 85px;
+}
 .m-l-30 {
 	margin-left: 30px;
 }
@@ -75,4 +78,27 @@ button {
 .l-container {
 	display: inline-block;
 	vertical-align: top;
+}
+.col-red {
+	color: #D0021B;
+}
+.page-title {
+	display: inline-block;
+	font-size: 42px;
+	line-height: 49px;
+	color: #000000;
+	font-style: italic;
+	padding-top: 50px;
+	position: relative;
+	&::after {
+		content: '';
+		display: block;
+		width: 90px;
+		height: 3px;
+		left: 0;
+		right: 0;
+		margin: 15px auto 0 auto;
+		background-color: #D0021B;
+	}
+
 }
