@@ -24,7 +24,6 @@ gulp.task('scripts-libs', function (done) {
 			prefix: '@@',
 			basepath: '@file'
 		}))
-		.pipe(gulp.dest('build/js')) // Выгружаем в папку build/js
 		.pipe(rename({ suffix: '.min' })) // Собираем их в кучу в новом файле libs.min.js
 		.pipe(uglify()) // Сжимаем JS файл
 		.pipe(gulp.dest('build/js')) // Выгружаем в папку build/js
@@ -37,8 +36,6 @@ gulp.task('scripts', function (done) {
 		'app/js/*', '!app/js/libs.js'
 	])
 		.pipe(plumber())
-		.pipe(gulp.dest('build/js')) // Выгружаем в папку build/js
-		.pipe(browserSync.reload({ stream: true }))
 		.pipe(uglify()) // Сжимаем JS файл
 		.pipe(rename({ suffix: '.min' })) // Добавляем суффикс .min
 		.pipe(gulp.dest('build/js')) // Выгружаем в папку build/js
@@ -88,8 +85,6 @@ gulp.task('browser-sync', function(done) {
 		},
 		notify: false
 	});
-
-	browserSync.watch('build/').on('change', browserSync.reload);
 
 	done();
 });
