@@ -2,9 +2,10 @@
   text-align: center;
   &__wrapper {
     display: flex;
+    max-width: 1200px;
     align-items: center;
     justify-content: space-evenly;
-    margin: 60px 0 50px 0;
+    margin: 60px auto 50px auto;
   }
   &__item {
     width: 380px;

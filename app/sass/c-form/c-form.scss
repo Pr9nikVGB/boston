@@ -1,0 +1,41 @@
+.c-form {
+  max-width: 440px;
+  width: 100%;
+  padding: 30px 60px 20px 60px;
+  border: 1px solid #f0f0f0;
+  &__title {
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #000000;
+    padding-bottom: 25px;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #DFDFDF;
+    margin-bottom: 15px;
+    padding: 11px 0 14px 25px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+    color: #000000;
+    @include input-placeholder {
+      font-family: 'Exo 2.0';
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 500;
+      color: #000000;
+      opacity: 0.5;
+      mix-blend-mode: normal;
+    }
+    &--textarea {
+      resize: none;
+      height: 98px;
+    }
+  }
+  &__button {
+    border: none;
+  }
+}

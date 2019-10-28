@@ -1,0 +1,12 @@
+.c-map {
+  max-width: 1920px;
+  height: 423px;
+  margin: 70px auto 0 auto;
+  &__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

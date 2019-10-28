@@ -1,19 +1,31 @@
 .c-drop-menu {
-  position: absolute;
-  display: none;
-  top: 35px;
-  min-width: 216px;
-  text-align: left;
-  padding: 20px 0 10px 25px;
-  list-style: none;
-  background-color: #fff;
-  font-size: 13px;
-  line-height: 16px;
   text-transform: uppercase;
-  border-top:3px solid #D0021B;
-  color: #000;
   font-weight: 500;
+  list-style: none;
   &__item {
     margin-bottom: 13px;
+    cursor: pointer;
+  }
+  &--top {
+    position: absolute;
+    display: none;
+    top: 35px;
+    min-width: 216px;
+    text-align: left;
+    padding: 20px 0 10px 25px;
+    background-color: #fff;
+    font-size: 13px;
+    line-height: 16px;
+    border-top:3px solid #D0021B;
+    color: #000;
+  }
+  &--footer {
+    display: block;
+    position: relative;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    column-count: 2;
+    column-gap: 65px;
   }
 }

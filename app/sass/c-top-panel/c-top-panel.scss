@@ -23,8 +23,19 @@
     line-height: 19px;
     display: block;
   }
-  &__contact {
-
+  &__title {
+    display: block;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 17px;
+    padding-bottom: 11px;
+  }
+  &__caption {
+    font-size: 13px;
+    line-height: 15px;
+    text-align: right;
+    mix-blend-mode: normal;
+    opacity: 0.8;
   }
   &__phone {
     display: inline-block;
