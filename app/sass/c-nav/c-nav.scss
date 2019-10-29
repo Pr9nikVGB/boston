@@ -12,6 +12,7 @@
   &__item {
     position: relative;
     cursor: pointer;
+    padding:20px 0;
     &:hover{
       .c-nav__caret:before{
         content: "\f0d8";

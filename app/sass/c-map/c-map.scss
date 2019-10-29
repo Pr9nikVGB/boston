@@ -1,12 +1,19 @@
 .c-map {
   max-width: 1920px;
-  height: 423px;
+  height: 440px;
   margin: 70px auto 0 auto;
+  position: relative;
   &__wrapper {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15px;
+    z-index: 1;
+    pointer-events: none;
   }
 }
