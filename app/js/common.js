@@ -30,4 +30,21 @@ $(function() {
 		myMap.geoObjects
 			.add(myPlacemarkWithContent);
 	}
+
+	var mySwiper = new Swiper ('.swiper-container', {
+		// Optional parameters
+		pagination: {
+			el: '.c-bullets__wrapper',
+			type: 'bullets',
+			bulletClass: 'c-bullets__bullet',
+			bulletActiveClass: 'c-bullets__bullet--active'
+		},
+		// Navigation arrows
+		navigation: {
+			nextEl: '.c-slide-arrows__arrow--left',
+			prevEl: '.c-slide-arrows__arrow--right',
+			disabledClass: 'c-slide-arrows__arrow--disable'
+		},
+		loop: true
+	})
 });

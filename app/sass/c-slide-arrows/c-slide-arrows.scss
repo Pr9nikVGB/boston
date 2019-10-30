@@ -1,0 +1,24 @@
+.c-slide-arrows {
+  &__wrapper {
+      width: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 20px;
+      color: #fff;
+  }
+  &__arrow {
+    display: inline-block;
+    width: 27px;
+    height: 54px;
+    background-image: url("/img/arrows.png");
+    background-size: cover;
+    cursor: pointer;
+    &--right {
+      background-position-x: 27px;
+    }
+    &--disable {
+      opacity: 0.5;
+    }
+  }
+}

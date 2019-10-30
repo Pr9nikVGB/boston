@@ -4,30 +4,9 @@
     width: 100%;
     text-align: left;
     margin: 0 auto;
-    padding-top: 120px;
+    padding-top: 195px;
   }
-  &__arrows {
-    width: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
-    color: #fff;
-  }
-  &__arrow {
-    display: inline-block;
-    width: 27px;
-    height: 54px;
-    background-image: url("/img/arrows.png");
-    background-size: cover;
-    cursor: pointer;
-    &--right {
-      background-position-x: 27px;
-    }
-    &--disable {
-      opacity: 0.5;
-    }
-  }
+
   &__title {
     color: #fff;
     font-style: italic;

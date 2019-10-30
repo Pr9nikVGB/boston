@@ -44,15 +44,25 @@
 			</nav>
 		</div>
 	</header>
-	<div class="c-main-slider__wrapper">
-		<div class="c-main-slider__slide c-slide" style="background-image: url('/img/main_foto.jpg')">
-			<div class="c-slide__wrapper">
-				<div class="c-slide__arrows">
-					<span class="c-slide__arrow c-slide__arrow--left c-slide__arrow--disable"></span>
-					<span class="c-slide__arrow c-slide__arrow--right"></span>
+	<div class="c-main-slider__wrapper swiper-container">
+		<div class="c-main-slider__arrows c-slide-arrows">
+			<div class="c-slide-arrows__wrapper">
+				<span class="c-slide-arrows__arrow c-slide-arrows__arrow--left"></span>
+				<span class="c-slide-arrows__arrow c-slide-arrows__arrow--right"></span>
+			</div>
+		</div>
+		<div class="swiper-wrapper">
+			<div class="c-main-slider__slide c-slide swiper-slide" style="background-image: url('/img/main_foto.jpg')">
+				<div class="c-slide__wrapper">
+					<h2 class="c-slide__title">Заголовок на видео</h2>
+					<p class="c-slide__text">Небольшой текстовый блок с описанием в несколько строчек</p>
 				</div>
-				<h2 class="c-slide__title">Заголовок на видео</h2>
-				<p class="c-slide__text">Небольшой текстовый блок с описанием в несколько строчек</p>
+			</div>
+			<div class="c-main-slider__slide c-slide swiper-slide" style="background-image: url('/img/main_foto.jpg')">
+				<div class="c-slide__wrapper">
+					<h2 class="c-slide__title">Заголовок на видео</h2>
+					<p class="c-slide__text">Небольшой текстовый блок с описанием в несколько строчек</p>
+				</div>
 			</div>
 		</div>
 		<div class="c-bullets">
