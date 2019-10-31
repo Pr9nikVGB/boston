@@ -37,7 +37,8 @@ $(function() {
 			el: '.c-bullets__wrapper',
 			type: 'bullets',
 			bulletClass: 'c-bullets__bullet',
-			bulletActiveClass: 'c-bullets__bullet--active'
+			bulletActiveClass: 'c-bullets__bullet--active',
+			clickable: true
 		},
 		// Navigation arrows
 		navigation: {

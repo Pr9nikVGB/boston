@@ -8,7 +8,9 @@
   }
   &--top {
     position: absolute;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in;
     top: 55px;
     min-width: 216px;
     text-align: left;

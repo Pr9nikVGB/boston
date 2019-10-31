@@ -2,9 +2,8 @@
   text-align: center;
   &__wrapper {
     display: flex;
-    max-width: 1200px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 60px auto 50px auto;
   }
   &__item {

@@ -14,11 +14,12 @@
     cursor: pointer;
     padding:20px 0;
     &:hover{
+      color: #d0021b;
       .c-nav__caret:before{
         content: "\f0d8";
       }
       .c-nav__drop-menu {
-        display: block;
+        opacity: 1;
       }
     }
   }
