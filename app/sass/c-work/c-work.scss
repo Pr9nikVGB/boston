@@ -1,3 +1,14 @@
+@keyframes growUp {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .c-work {
   width: 25%;
   height: 360px;
@@ -7,16 +18,19 @@
   cursor: pointer;
   &:hover {
     .c-work__wrapper {
-      display: block;
+     animation: growUp 400ms ease-out;
+      transform: scale(1);
+
     }
   }
   &__wrapper {
-    display: none;
     color: #FFFFFF;
     background-color: rgba(220, 5, 5, 0.85);
     padding: 40px 25px 20px 25px;
     text-align: left;
     height: 100%;
+    transform: scale(0);
+    transition: sc;
   }
   &__title,
   &__text {
