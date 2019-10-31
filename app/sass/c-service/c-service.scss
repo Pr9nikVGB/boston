@@ -9,18 +9,20 @@
   text-align: left;
   position: relative;
   cursor: pointer;
+  &:hover{
+    .c-service__text {
+      max-height: 120px;
+      opacity: 1;
+    }
+  }
   &__wrapper {
     position: absolute;
     bottom: 70px;
     padding-left: 40px;
     padding-bottom: 30px;
-    &--active {
-      .c-service__text {
-        display: block;
-      }
-    }
   }
   &__title {
+    margin-bottom: 20px;
     font-size: 32px;
     font-style: italic;
     line-height: 37px;
@@ -44,9 +46,10 @@
     }
   }
   &__text {
-    padding-top: 20px;
     font-size: 24px;
     line-height: 29px;
-    display: none;
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 250ms 150ms, max-height 250ms ease-in;
   }
 }

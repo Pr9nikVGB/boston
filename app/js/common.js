@@ -41,8 +41,8 @@ $(function() {
 		},
 		// Navigation arrows
 		navigation: {
-			nextEl: '.c-slide-arrows__arrow--left',
-			prevEl: '.c-slide-arrows__arrow--right',
+			nextEl: '.c-slide-arrows__arrow--right',
+			prevEl: '.c-slide-arrows__arrow--left',
 			disabledClass: 'c-slide-arrows__arrow--disable'
 		},
 		loop: true
