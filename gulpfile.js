@@ -90,7 +90,7 @@ gulp.task('browser-sync', function(done) {
 });
 
 gulp.task('sass', function(done){
-	return gulp.src('app/sass/**/*.scss') // Берем источник
+	return gulp.src(['app/sass/main.scss','app/sass/components/**/*.scss', 'app/sass/media.scss']) // Берем источник
 		.pipe(plumber({
 			errorHandler : function(err) {
 				console.log(err);

@@ -1,0 +1,29 @@
+@media only screen  and (max-width: 1250px) {
+  .l-wrapper {
+    max-width: 1000px;
+  }
+  .c-service {
+    max-width: 325px;
+    height: 285px;
+    &__wrapper {
+      bottom: 25px;
+    }
+  }
+   .c-works__wrapper {
+     justify-content: space-around;
+   }
+  .c-work {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  .c-news {
+    &__mark {
+      top: 230px;
+      left: 30px;
+    }
+    &__item {
+      max-width: 30%;
+    }
+  }
+
+}

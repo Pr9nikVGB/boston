@@ -1,3 +1,5 @@
+@import './libs/libs';
+@import './libs/fonts';
 @mixin backImage($position, $size, $repeat) {
 	background-position: $position;
 	background-size: $size;
@@ -125,5 +127,3 @@ button {
 	-webkit-filter: grayscale(100%);
 	/* Chrome 19+ & Safari 6+ */
 }
-
-@import 'media';
