@@ -25,5 +25,19 @@
       max-width: 30%;
     }
   }
-
+  .c-footer__item .c-button-sing-up {
+    margin-left: 65px;
+    margin-bottom: 15px;
+  }
+}
+@media only screen  and (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+  .l-wrapper {
+    width: 90%;
+  }
+  .c-choice__wrapper {
+    padding: 115px 0 0 0;
+  }
 }
