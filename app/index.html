@@ -1,21 +1,27 @@
 @@include('./template/header.html')
 <div class="c-top-panel">
 	<div class="c-top-panel__wrapper l-wrapper">
+		<div class="c-menu-button js-menu-button">
+			<div class="c-menu-button__bar c-menu-button__bar--top"></div>
+			<div class="c-menu-button__bar c-menu-button__bar--middle"></div>
+			<div class="c-menu-button__bar c-menu-button__bar--bottom"></div>
+		</div>
 		<div class="c-top-panel__block">
-			<button class="c-top-panel__button c-button-sing-up c-button-sing-up--transparent">Записаться</button>
-			<p class="c-top-panel__text m-l-20">Работаем без перерывов<br>и выходных с <span class="t-bold">9:00 - 18:00</span></p>
+			<button class="c-top-panel__button c-button-sing-up c-button-sing-up--transparent mob-hidden">Записаться</button>
+			<p class="c-top-panel__text ml-20 mob-hidden">Работаем без перерывов<br>и выходных с <span class="t-bold">9:00 - 18:00</span></p>
+			<p class="c-top-panel__text m-ml-15 mobile-visible">Время работы 9:00 - 18:00<br>ул. Большая Ордынка 38</p>
 		</div>
 		<div class="c-top-panel__block">
 			<div class="c-top-panel__contact">
 				<span class="c-top-panel__phone"></span>
-				<div class="l-container m-l-15 desktop">
+				<div class="l-container ml-15 desktop">
 					<a class="c-top-panel__number" href="tel:+79992222222">+7 999 222 22 22</a>
 					<span class="c-top-panel__text">ул. Большая Ордынка 38</span>
 				</div>
 			</div>
-			<div class="c-icons m-l-30">
+			<div class="c-icons ml-30 m-ml-15">
 				<span class="c-icons__icon c-icons__icon--red"><i class="fab fa-instagram icon-middle"></i></span>
-				<span class="c-icons__icon c-icons__icon--red m-l-5"><i class="fab fa-vk icon-middle"></i></span>
+				<span class="c-icons__icon c-icons__icon--red ml-5"><i class="fab fa-vk icon-middle"></i></span>
 			</div>
 		</div>
 	</div>
@@ -24,10 +30,10 @@
 	<header class="c-header">
 		<div class="c-header__wrapper l-wrapper">
 			<img class="c-header__logo" src="img/logo.svg" >
-			<nav class="c-header__nav c-nav">
+			<nav class="c-header__nav c-nav mob-hidden">
 				<div class="c-nav__list">
 					<div class="c-nav__item"><a class="c-nav__link">Дейтелинг</a></div>
-					<div class="c-nav__item m-l-85">
+					<div class="c-nav__item ml-85">
 						<a class="c-nav__link c-nav__link--parent">Услуги</a><i class="fas fa-caret-down c-nav__caret col-red"></i>
 						<ul class="c-nav__drop-menu c-drop-menu c-drop-menu--top">
 							<li class="c-drop-menu__item c-drop-menu__item--active">Полировка</li>
@@ -38,8 +44,8 @@
 							<li class="c-drop-menu__item">Тонировка</li>
 						</ul>
 					</div>
-					<div class="c-nav__item m-l-85"><a class="c-nav__link">Новости</a></div>
-					<div class="c-nav__item m-l-85"><a class="c-nav__link">Контакты</a></div>
+					<div class="c-nav__item ml-85"><a class="c-nav__link">Новости</a></div>
+					<div class="c-nav__item ml-85"><a class="c-nav__link">Контакты</a></div>
 				</div>
 			</nav>
 		</div>
@@ -309,7 +315,7 @@
 			<img class="c-header__logo" src="img/logo.svg" >
 			<div class="c-icons m-t-15">
 				<span class="c-icons__icon c-icons__icon--white"><i class="fab fa-instagram icon-middle"></i></span>
-				<span class="c-icons__icon c-icons__icon--white m-l-5"><i class="fab fa-vk icon-middle"></i></span>
+				<span class="c-icons__icon c-icons__icon--white ml-5"><i class="fab fa-vk icon-middle"></i></span>
 			</div>
 		</div>
 		<div class="c-footer__item desktop">
@@ -325,9 +331,9 @@
 		<div class="c-footer__item c-footer__item--mobile-reverse">
 			<button class="c-top-panel__button c-button-sing-up  c-button-sing-up--white">Записаться</button>
 			<div class="c-footer__contacts">
-				<div class="l-container m-l-65">
+				<div class="l-container ml-65">
 					<span class="c-top-panel__title">Контакты</span>
-					<span class="c-top-panel__phone"></span><a class="c-top-panel__number m-l-20" href="tel:+79992222222">+7 999 222 22 22</a>
+					<span class="c-top-panel__phone"></span><a class="c-top-panel__number ml-20" href="tel:+79992222222">+7 999 222 22 22</a>
 					<span class="c-top-panel__text m-t-10 ">ул. Большая Ордынка 38</span>
 					<span class="c-top-panel__caption m-t-10">С 9:00 до 18:00</span>
 				</div>

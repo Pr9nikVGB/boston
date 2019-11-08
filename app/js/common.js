@@ -47,5 +47,8 @@ $(function() {
 			disabledClass: 'c-slide-arrows__arrow--disable'
 		},
 		loop: true
+	});
+	$('.js-menu-button').on('click', function(e){
+		$(e.currentTarget).toggleClass('c-menu-button--active');
 	})
 });

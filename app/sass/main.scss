@@ -1,23 +1,5 @@
 @import './libs/libs';
 @import './libs/fonts';
-@mixin backImage($position, $size, $repeat) {
-	background-position: $position;
-	background-size: $size;
-	background-repeat: $repeat;
-}
-@mixin border($borderTop, $borderRight, $borderBottom, $borderLeft) {
-	border-top: $borderTop;
-	border-left: $borderLeft;
-	border-right: $borderRight;
-	border-bottom: $borderBottom;
-}
-@mixin input-placeholder {
-	&.placeholder { @content; }
-	&:-moz-placeholder { @content; }
-	&::-moz-placeholder { @content; }
-	&:-ms-input-placeholder { @content; }
-	&::-webkit-input-placeholder { @content; }
-}
 [type='checkbox'], [type='file'] {
 	display: none;
 }
@@ -52,22 +34,22 @@ a {
 		text-decoration: none;
 	}
 }
-.m-l-85 {
+.ml-85 {
 	margin-left: 85px;
 }
-.m-l-65 {
+.ml-65 {
 	margin-left: 65px;
 }
-.m-l-30 {
+.ml-30 {
 	margin-left: 30px;
 }
-.m-l-20 {
+.ml-20 {
 	margin-left: 20px;
 }
-.m-l-15 {
+.ml-15 {
 	margin-left: 15px;
 }
-.m-l-5 {
+.ml-5 {
 	margin-left: 5px;
 }
 .m-t-10 {
@@ -100,7 +82,7 @@ button {
 }
 .page-title {
 	display: inline-block;
-	font-size: 42px;
+	font-size: 2.625rem;
 	line-height: 49px;
 	color: #000000;
 	font-style: italic;

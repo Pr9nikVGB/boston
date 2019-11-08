@@ -1,0 +1,18 @@
+@mixin backImage($position, $size, $repeat) {
+  background-position: $position;
+  background-size: $size;
+  background-repeat: $repeat;
+}
+@mixin border($borderTop, $borderRight, $borderBottom, $borderLeft) {
+  border-top: $borderTop;
+  border-left: $borderLeft;
+  border-right: $borderRight;
+  border-bottom: $borderBottom;
+}
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}

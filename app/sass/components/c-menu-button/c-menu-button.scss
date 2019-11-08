@@ -1,0 +1,24 @@
+.c-menu-button {
+  display: inline-block;
+  cursor: pointer;
+  &__bar{
+    width: 22px;
+    height: 2px;
+    background-color: #FFFFFF;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  &--active {
+    .c-menu-button__bar {
+      &--top {
+        transform: rotate(-45deg) translate(-3px, 4px) ;
+      }
+      &--middle {
+        opacity: 0;
+      }
+      &--bottom {
+        transform: rotate(45deg) translate(-6px, -7px) ;
+      }
+    }
+  }
+}

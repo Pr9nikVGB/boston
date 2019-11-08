@@ -97,8 +97,8 @@ gulp.task('sass', function(done){
 				this.emit('end');
 			}
 		}))
-		.pipe(concat('all.css'))
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
+		.pipe(concat('all.css'))
 		.pipe(autoprefixer({
 			browsers: ['> 0.1%'],
 			cascade: false
