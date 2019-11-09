@@ -1,8 +1,10 @@
 .c-map {
   max-width: 1920px;
-  height: 440px;
   margin: 70px auto 0 auto;
   position: relative;
+  &__container {
+    height: 440px;
+  }
   &__wrapper {
     display: flex;
     align-items: center;

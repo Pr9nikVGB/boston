@@ -36,7 +36,7 @@ gulp.task('scripts', function (done) {
 		'app/js/*', '!app/js/libs.js'
 	])
 		.pipe(plumber())
-		.pipe(uglify()) // Сжимаем JS файл
+		//.pipe(uglify()) // Сжимаем JS файл
 		.pipe(rename({ suffix: '.min' })) // Добавляем суффикс .min
 		.pipe(gulp.dest('build/js')) // Выгружаем в папку build/js
 		.pipe(browserSync.reload({stream: true}));

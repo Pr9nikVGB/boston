@@ -1,8 +1,14 @@
-$(function() {
+$(document).ready(function() {
+	let mobile = false;
+	if ( $(window).width() < '768') {
+		mobile = true;
+	}
+	console.log(mobile);
 	ymaps.ready(init);
 	function init() {
+		console.log(mobile);
 		var myMap = new ymaps.Map("map", {
-				center: [55.699484, 37.818073],
+				center: (mobile) ? [55.699157, 37.806075] :[55.699484, 37.818073],
 				zoom: 14,
 				controls: []
 			}, {
