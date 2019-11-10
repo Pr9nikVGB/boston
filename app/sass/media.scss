@@ -108,6 +108,9 @@
   .m-ml-15 {
     margin-left: 15px;
   }
+  .m-ml-35 {
+    margin-left: 35px;
+  }
   .mobile-visible {
     display: block;
   }
@@ -122,6 +125,9 @@
     padding: 0 15px;
     width: 100%;
   }
+  .fixed-panel {
+    padding-top: 61px;
+  }
   .c-services__button {
     width: 90%
   }
@@ -130,6 +136,12 @@
     height: 30px;
     line-height: 25px;
     padding: 0;
+  }
+  .c-top-panel--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: showAnimation 0.5s ease-in;
   }
   .c-top-panel__text {
     line-height: 15px;

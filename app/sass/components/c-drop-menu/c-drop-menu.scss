@@ -2,6 +2,7 @@
   text-transform: uppercase;
   font-weight: 500;
   list-style: none;
+  display: none;
   &__item {
     margin-bottom: 13px;
     cursor: pointer;
@@ -11,6 +12,7 @@
   }
   &--top {
     position: absolute;
+    display: block;
     opacity: 0;
     visibility: hidden;
     transition: opacity 300ms ease-in;
