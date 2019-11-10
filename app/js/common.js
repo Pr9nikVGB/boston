@@ -12,7 +12,8 @@ $(document).ready(function() {
 				zoom: 14,
 				controls: []
 			}, {
-				searchControlProvider: 'yandex#search'
+				searchControlProvider: 'yandex#search',
+				suppressMapOpenBlock: true
 			}),
 			MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
 				'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'

@@ -5,11 +5,14 @@
   &__item {
     margin-bottom: 13px;
     cursor: pointer;
+    &:hover {
+      color: #d0021b;
+    }
   }
   &--top {
     position: absolute;
     opacity: 0;
-    pointer-events: none;
+    visibility: hidden;
     transition: opacity 300ms ease-in;
     top: 55px;
     min-width: 216px;

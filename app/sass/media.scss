@@ -1,3 +1,6 @@
+.mobile-visible {
+  display: none;
+}
 @media only screen  and (max-width: 1250px) {
   .l-wrapper {
     max-width: 1000px;
@@ -14,14 +17,14 @@
    }
   .c-work {
     width: 48%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .c-news {
     &__mark {
       top: 200px;
     }
     &__item {
-      max-width: 30%;
+      max-width: 32%;
     }
   }
   .c-footer__item .c-button-sing-up {
@@ -41,8 +44,8 @@
 
   }
   .c-service {
-    max-width: 45%;
-    height: 285px;
+    max-width: 48%;
+    height: auto;
   }
   .c-choice__item {
     width: 30%;
@@ -119,6 +122,9 @@
     padding: 0 15px;
     width: 100%;
   }
+  .c-services__button {
+    width: 90%
+  }
   .c-icons__icon {
     width: 30px;
     height: 30px;
@@ -182,13 +188,14 @@
   .c-service {
     width: 100%;
     max-width: none;
-    height: 240px;
+    height: auto;
   }
   .c-choice {
     height: auto;
   }
   .c-choice__wrapper {
     padding: 45px 0 0;
+    overflow: hidden;
   }
   .c-choice__item {
     width: 50%;
@@ -207,6 +214,11 @@
   .c-work {
     width: 100%;
     font-size: 16px;
+    margin-bottom: 1px;
+  }
+  .c-news__mark {
+    top: 195px;
+    left: 20px;
   }
   .c-news__wrapper {
     margin: 25px 0 0 0;
@@ -218,7 +230,7 @@
     margin-bottom: 15px;
   }
   .c-map {
-    margin: 0;
+    margin: 25px 0 0 0;
   }
   .c-map__wrapper {
     position: relative;
@@ -231,5 +243,8 @@
   .c-form {
     border: none;
     padding: 0;
+  }
+  .c-form__button {
+    width: 100%;
   }
 }
