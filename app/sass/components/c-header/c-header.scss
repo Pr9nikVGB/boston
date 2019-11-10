@@ -10,4 +10,26 @@
     justify-content: space-between;
     align-items: center;
   }
+  &__shadow {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: none;
+    box-shadow: 0 6px 8px #999;
+    mix-blend-mode: multiply;
+    height: 86px;
+    background-color: #040404;
+  }
+  &--fixed {
+    position: fixed;
+    padding: 10px 0;
+    top: 0;
+    left: 0;
+    background-color: #040404;
+    animation: showAnimation 0.5s ease-in;
+    & ~ .c-header__shadow {
+      display: block;
+      animation: showAnimation 0.5s ease-in;
+    }
+}
 }

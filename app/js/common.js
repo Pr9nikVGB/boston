@@ -3,7 +3,6 @@ $(document).ready(function() {
 	if ( $(window).width() < '768') {
 		mobile = true;
 	}
-	console.log(mobile);
 	ymaps.ready(init);
 	function init() {
 		console.log(mobile);
@@ -57,5 +56,13 @@ $(document).ready(function() {
 	});
 	$('.js-menu-button').on('click', function(e){
 		$(e.currentTarget).toggleClass('c-menu-button--active');
-	})
+	});
+	let header = $('.c-header');
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 700) {
+			header.addClass("c-header--fixed");
+		} else {
+			header.removeClass("c-header--fixed");
+		}
+	});
 });
