@@ -11,7 +11,9 @@
 
   }
   &__line {
-    color: #333333;
+    border: 0;
+    background-color: #333333;
+    height: 1px;
   }
   &__contacts {
     display: inline-block;
