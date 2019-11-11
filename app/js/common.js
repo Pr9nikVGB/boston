@@ -1,11 +1,10 @@
 $(document).ready(function() {
 	let mobile = false;
-	if ( $(window).width() < '768') {
+	if ( $(window).width() < '767') {
 		mobile = true;
 	}
 	ymaps.ready(init);
 	function init() {
-		console.log(mobile);
 		var myMap = new ymaps.Map("map", {
 				center: (mobile) ? [55.699157, 37.806075] :[55.699484, 37.818073],
 				zoom: 14,
@@ -61,7 +60,7 @@ $(document).ready(function() {
 		$(e.currentTarget).parent().find('.c-drop-menu').fadeToggle("slow", "linear");
 	});
 	$(window).scroll(function () {
-		if ($(window).width() > 768) {
+		if ($(window).width() >= 768) {
 			if ($(this).scrollTop() > 700) {
 				$('.c-header').addClass("c-header--fixed");
 			} else {

@@ -111,6 +111,12 @@
   .m-ml-35 {
     margin-left: 35px;
   }
+  .m-ml-0 {
+    margin-left: 0;
+  }
+  .m-mt-0 {
+    margin-top: 0;
+  }
   .mobile-visible {
     display: block;
   }
@@ -258,5 +264,21 @@
   }
   .c-form__button {
     width: 100%;
+  }
+  .c-footer {
+    padding: 25px 0;
+  }
+  .c-footer__wrapper {
+    flex-direction: column;
+  }
+  .c-footer__contacts {
+    margin-top: 20px;
+  }
+  .c-footer__item--mob-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .c-top-panel__title {
+    font-size: 13px;
   }
 }
