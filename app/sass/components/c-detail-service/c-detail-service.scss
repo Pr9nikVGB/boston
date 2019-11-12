@@ -1,0 +1,24 @@
+.c-detail-service {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 40px;
+  &__column {
+    width: 100%;
+    &--left {
+      max-width: 390px;
+    }
+    &--right {
+      max-width: 750px;
+    }
+  }
+  &__block {
+    margin-bottom: 50px;
+  }
+  &__subtitle {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}

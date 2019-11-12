@@ -1,0 +1,20 @@
+.c-news-detail {
+  &__item {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #E7E7E7;
+    position: relative;
+  }
+}
+.c-news__mark{
+  &--detail {
+    left: 65px;
+    bottom: 15px;
+    top: auto;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

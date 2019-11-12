@@ -1,0 +1,21 @@
+.c-detail-service-list {
+  list-style: none;
+  padding-left: 10px;
+  &__item {
+    font-size: 20px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #000000;
+    i {
+      color: #9B9B9B;
+      margin-right: 12px;
+    }
+    &--active {
+      color: #D0021B;
+      font-weight: bold;
+      i {
+        color: #D0021B;
+      }
+    }
+  }
+}
