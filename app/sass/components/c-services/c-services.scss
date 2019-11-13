@@ -40,7 +40,7 @@
         background-color: #D0021B;
         color: #fff;
         .c-services__button-icon--detail {
-          background-image: url("/img/price_icon.png");
+          background-image: url("../img/price_icon.png");
         }
       }
     }
@@ -51,7 +51,7 @@
       display: inline-block;
       width: 30px;
       height: 38px;
-      background-image: url("/img/price_icon.png");
+      background-image: url("../img/price_icon.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -59,7 +59,7 @@
       &--detail {
         width: 23px;
         height: 29px;
-        background-image: url("/img/price_icon_red.svg");
+        background-image: url("../img/price_icon_red.svg");
       }
     }
   }
