@@ -9,14 +9,22 @@
   &__button {
     width: 320px;
     background-color: #D0021B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 60px;
     font-size: 1.125rem;
     color: #fff;
-    display: inline-block;
     text-align: center;
     text-transform: uppercase;
     line-height: 60px;
     cursor: pointer;
+    border: 1px solid transparent;
+    margin: 0 auto;
+    transition: all .2s ease-out;
+    &:hover {
+      background-color: #f90422;
+    }
     &--detail {
       width: 190px;
       height: 50px;
@@ -27,6 +35,14 @@
       line-height: 46px;
       text-transform: uppercase;
       color: #D0021B;
+      margin: 0;
+      &:hover {
+        background-color: #D0021B;
+        color: #fff;
+        .c-services__button-icon--detail {
+          background-image: url("/img/price_icon.png");
+        }
+      }
     }
     &-text {
       padding-right: 20px;
@@ -40,6 +56,16 @@
       background-position: center;
       background-repeat: no-repeat;
       vertical-align: middle;
+      &--detail {
+        width: 23px;
+        height: 29px;
+        background-image: url("/img/price_icon_red.svg");
+      }
     }
+  }
+}
+.c-main-slider__slide--service {
+  .c-services__button {
+    margin: 0;
   }
 }

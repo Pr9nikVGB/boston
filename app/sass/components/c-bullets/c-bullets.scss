@@ -22,4 +22,13 @@
       background-color: #D0021B;
     }
   }
+  &--detail {
+    bottom: 25px;
+    text-align: left;
+    .c-bullets__wrapper {
+      display: inline-flex;
+      padding-left: 30px;
+      justify-content: left;
+    }
+  }
 }

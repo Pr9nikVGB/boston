@@ -5,14 +5,22 @@
   line-height: 22px;
   text-transform: uppercase;
   border: none;
+  transition: all .2s ease-out;
   &--transparent {
     border: 3px solid #D0021B;
     background: transparent;
     color: #fff;
+    &:hover {
+      background-color: #D0021B;
+    }
   }
   &--white {
     background-color: #FFFFFF;
     color: #000000;
     font-weight: 600  ;
+    &:hover {
+      background-color: #D0021B;
+      color: #fff;
+    }
   }
 }

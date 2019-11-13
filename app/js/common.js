@@ -36,7 +36,7 @@ $(document).ready(function() {
 			.add(myPlacemarkWithContent);
 	}
 
-	var mySwiper = new Swiper ('.swiper-container', {
+	var mySwiper = new Swiper ('.c-main-slider__wrapper', {
 		// Optional parameters
 		pagination: {
 			el: '.c-bullets__wrapper',
@@ -50,6 +50,22 @@ $(document).ready(function() {
 			nextEl: '.c-slide-arrows__arrow--right',
 			prevEl: '.c-slide-arrows__arrow--left',
 			disabledClass: 'c-slide-arrows__arrow--disable'
+		},
+		loop: true
+	});
+	var myNewSwiper = new Swiper ('.c-detail-slider__wrapper', {
+		pagination: {
+			el: '.c-bullets__wrapper',
+			type: 'bullets',
+			bulletClass: 'c-bullets__bullet',
+			bulletActiveClass: 'c-bullets__bullet--active',
+			clickable: true
+		},
+		// Navigation arrows
+		navigation: {
+			nextEl: '.c-detail-slider-arrows__arrow--right',
+			prevEl: '.c-detail-slider-arrows__arrow--left',
+			disabledClass: 'c-detail-slider-arrows__arrow--disable'
 		},
 		loop: true
 	});

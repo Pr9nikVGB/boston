@@ -1,0 +1,41 @@
+.c-detail-slider {
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+  &__wrapper {
+    height: 320px;
+  }
+  &__item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  &-arrows {
+    &__arrow {
+      width: 58px;
+      height: 58px;
+      line-height: 58px;
+      border-radius: 100%;
+      display: inline-block;
+      background-color: #D0021B;
+      text-align: center;
+      color: #fff;
+      cursor: pointer;
+      position: absolute;
+      top: 131px;
+      z-index: 2;
+      outline: none;
+      &--disable {
+        background-color: #FFFFFF;
+        color: #999;
+      }
+      &--left {
+        left: -28px;
+      }
+      &--right {
+        right: -28px;
+      }
+    }
+  }
+}

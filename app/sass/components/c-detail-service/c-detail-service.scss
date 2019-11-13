@@ -14,6 +14,16 @@
   }
   &__block {
     margin-bottom: 50px;
+    &--news {
+      display: inline-block;
+      width: 347px;
+      margin-left: 25px;
+    }
+    &--service {
+      display: inline-block;
+      vertical-align: top;
+
+    }
   }
   &__subtitle {
     font-weight: bold;
