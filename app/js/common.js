@@ -93,4 +93,28 @@ $(document).ready(function() {
 			}
 		}
 	});
+	$('.js-select-service').select2({
+		width:'100%',
+		minimumResultsForSearch: Infinity,
+		containerCssClass :'c-select-service',
+		dropdownCssClass:'c-select-service__dropdown'
+	});
+	$('.js-show-form-popup').on('click', function () {
+		$.fancybox.open({
+			src  : '.c-order-form',
+			type : 'inline',
+			opts : {
+				padding:0,
+				touch: false,
+				smallBtn : false,
+				toolbar : false,
+				afterShow : function( instance, current ) {
+					$('#popupOrderCloseBtn').on('click', function (e) {
+						$.fancybox.close();
+					});
+				}
+			}
+		});
+	})
+
 });

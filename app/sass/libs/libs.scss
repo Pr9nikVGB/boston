@@ -517,4 +517,13 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
 @import "fontawesome.min";
+@import "select2.min";
+@import "jquery.fancybox";
+

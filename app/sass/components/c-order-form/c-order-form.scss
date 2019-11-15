@@ -1,0 +1,120 @@
+@import "../../guide";
+.c-order-form {
+  max-width: 530px;
+  width: 100%;
+  display: none;
+  padding: 0;
+  &__wrapper {
+    padding: 30px 105px;
+    text-align: center;
+  }
+  &__title {
+    font-size: 38px;
+    line-height: 45px;
+    margin-bottom: 30px;
+    &:after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 3px;
+      left: 0;
+      right: 0;
+      margin: 10px auto 0;
+      background-color: #d0021b;
+    }
+  }
+  &__input-wrapper {
+    width: 100%;
+  }
+  &__input {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #000;
+    border: 1px solid #979797;
+    padding: 15px 0 15px 20px;
+    margin-bottom: 15px;
+    @include input-placeholder {
+      font-family: 'Exo 2.0';
+      font-size: 13px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #000000;
+      font-weight: 500;
+    }
+    &--button {
+      height: 60px;
+      font-size: 18px;
+      line-height: 22px;
+      text-transform: uppercase;
+      background-color: #D0021B;
+      color: #FFFFFF;
+      border: none;
+    }
+  }
+  &__subtitle {
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    margin: 25px 0;
+  }
+  &__radio-wrapper {
+    width: 280px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__radio-item {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+  &__label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  &__radio {
+    &:checked + .c-order-form__label {
+      .c-order-form__radio-btn::before {
+        background-color: #D0021B;
+      }
+      .c-order-form__icon {
+        opacity: 1;
+      }
+    }
+  }
+  &__radio-btn {
+    width: 30px;
+    height: 30px;
+    line-height: 33px;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    border-radius: 19px;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    &:before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border-radius: 100%;
+      display: inline-block;
+      background-color: transparent;
+    }
+  }
+  &__icon {
+    fill: black;
+    opacity: 0.3;
+    margin-right: 10px;
+  }
+  &__input-description {
+    display: block;
+    font-size: 13px;
+    color: #000000;
+    opacity: 0.5;
+    margin-top: 5px;
+  }
+}
