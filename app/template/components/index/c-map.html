@@ -2,11 +2,13 @@
     <div class="c-map__container" id="map"></div>
     <div class="c-map__wrapper l-wrapper">
         <div class="c-map__form c-form">
-            <h4 class="c-form__title">Обратная связь</h4>
-            <input class="c-form__input" type="text" placeholder="Имя">
-            <input class="c-form__input" type="text" placeholder="Телефон">
-            <textarea class="c-form__input c-form__input--textarea" placeholder="Ваш комментарий"></textarea>
-            <input class="c-services__button c-form__button" type="submit" value="Отправить">
+            <form action="/ajax/form_handler/order_services.php" name="callback" method="POST">
+                <h4 class="c-form__title">Обратная связь</h4>
+                <input class="c-form__input js-mask-fio" type="text" name="name" placeholder="Имя">
+                <input class="c-form__input js-mask-phone" type="text" name="phone" placeholder="Телефон">
+                <textarea class="c-form__input c-form__input--textarea js-mask-text" name="comment" placeholder="Ваш комментарий"></textarea>
+                <input class="c-services__button c-form__button js-send-form" type="submit" value="Отправить">
+            </form>
         </div>
     </div>
 </section>

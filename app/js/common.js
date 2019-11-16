@@ -135,5 +135,32 @@ $(document).ready(function() {
 			})
 		}
 	});
+	$('.js-mask-phone').inputmask({"mask": "+7 (999) 999-99-99"}); //specifying options
+	$('.js-mask-fio').inputmask('', {
+		regex: "[A-Za-zА-Яа-я0-9 ]*"
+	});
+	$('.js-mask-text').inputmask('', {
+		regex: "[A-Za-zА-Яа-я0-9-/., ]*"
+	});
+	$('.js-send-form').on('click', function (e) {
+		e.preventDefault();
+		let form  = $(this).parents('form'),
+			formData = form.serialize(),
+			action = form.attr('action'),
+		 	successText = `<h2 class="c-form__title">Форма успешно отправлена</h2>`+
+							`<p>В ближайшее время мы с вами свяжемся</p>`+
+							`<img class="c-form__success-icon" src="/local/templates/main/img/success_img.svg" alt="">`;
+		$.ajax({
+			type: 'POST',
+			url: action,
+			dataType: 'json',
+			data:formData,
+			success: function(data){
+				if (data.error === 'N') {
+					form.replaceWith(successText);
+				}
 
+			}
+		})
+	})
 });

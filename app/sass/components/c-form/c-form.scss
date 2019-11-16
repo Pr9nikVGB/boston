@@ -14,6 +14,7 @@
     padding-bottom: 25px;
   }
   &__input {
+    font-family: 'Exo 2.0';
     display: block;
     width: 100%;
     background: #FFFFFF;
@@ -41,5 +42,9 @@
   }
   &__button {
     border: none;
+  }
+  &__success-icon {
+    display: block;
+    margin: 50px auto 0 auto;
   }
 }
