@@ -3,6 +3,7 @@
   &__wrapper {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 60px auto 50px auto;
   }
@@ -12,6 +13,7 @@
     height: 475px;
     position: relative;
     text-align: left;
+    margin-bottom: 15px;
   }
   &__image {
     width: 100%;

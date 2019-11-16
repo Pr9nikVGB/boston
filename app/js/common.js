@@ -115,6 +115,25 @@ $(document).ready(function() {
 				}
 			}
 		});
-	})
+	});
+	$('.js-load-more').on('click', function(){
+		let targetContainer = $('.c-news__wrapper'), //  Контейнер, в котором хранятся элементы
+			url =  $('.js-load-more').attr('data-url'); //  URL, из которого будем брать элементы
+		if (url !== undefined) {
+			$.ajax({
+				type: 'GET',
+				url: url,
+				dataType: 'html',
+				success: function(data){
+					//  Удаляем старую навигацию
+					$('.js-load-more').remove();
+					let elements = $(data).find('.c-news__item'),  //  Ищем элементы
+						pagination = $(data).find('.js-load-more');//  Ищем навигацию
+					targetContainer.append(elements);   //  Добавляем посты в конец контейнера
+					targetContainer.append(pagination); //  добавляем навигацию следом
+				}
+			})
+		}
+	});
 
 });
