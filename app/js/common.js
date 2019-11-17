@@ -26,7 +26,7 @@ $(document).ready(function() {
 					'С 9:00 до 18:00',
 			}, {
 				iconLayout: 'default#imageWithContent',
-				iconImageHref: 'img/placemark.svg',
+				iconImageHref: '/upload/img/placemark.svg',
 				iconImageSize: [47, 62],
 				iconImageOffset: [-23, -62],
 				iconContentOffset: [15, 15],
