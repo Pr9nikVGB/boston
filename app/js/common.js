@@ -100,6 +100,8 @@ $(document).ready(function() {
 		dropdownCssClass:'c-select-service__dropdown'
 	});
 	$('.js-show-form-popup').on('click', function () {
+		let idSevices = $(this).data('select-services');
+		console.log(idSevices);
 		$.fancybox.open({
 			src  : '.c-order-form',
 			type : 'inline',
@@ -108,6 +110,11 @@ $(document).ready(function() {
 				touch: false,
 				smallBtn : false,
 				toolbar : false,
+				beforeShow : function( instance, current ) {
+					if (idSevices !== undefined) {
+						$('.js-select-service').val(idSevices).trigger('change');
+					}
+				},
 				afterShow : function( instance, current ) {
 					$('#popupOrderCloseBtn').on('click', function (e) {
 						$.fancybox.close();
