@@ -15,7 +15,7 @@
     display: block;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 300ms ease-in;
+    transition: opacity 300ms ease-in, visibility 300ms ease-in;
     top: 55px;
     min-width: 216px;
     text-align: left;
