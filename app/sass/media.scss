@@ -37,6 +37,9 @@
   .c-detail-service__column--right {
     max-width: 600px;
   }
+  .c-news__mark {
+    top: 260px;
+  }
 }
 @media only screen  and (max-width: 1024px) {
   .l-wrapper {
@@ -60,9 +63,6 @@
   }
   .c-choice__text {
     margin:0 auto;
-  }
-  .c-news__mark {
-    top:175px;
   }
   .desktop {
     display: none;
@@ -90,7 +90,6 @@
     height: auto;
   }
   .c-news__mark {
-    top: 125px;
     left: 15px;
   }
   .c-choice__item {
@@ -254,7 +253,6 @@
     margin-bottom: 1px;
   }
   .c-news__mark {
-    top: 195px;
     left: 20px;
   }
   .c-news__wrapper {

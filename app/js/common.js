@@ -50,8 +50,7 @@ $(document).ready(function() {
 			nextEl: '.c-slide-arrows__arrow--right',
 			prevEl: '.c-slide-arrows__arrow--left',
 			disabledClass: 'c-slide-arrows__arrow--disable'
-		},
-		loop: true
+		}
 	});
 	var myNewSwiper = new Swiper ('.c-detail-slider__wrapper', {
 		pagination: {
@@ -66,8 +65,7 @@ $(document).ready(function() {
 			nextEl: '.c-detail-slider-arrows__arrow--right',
 			prevEl: '.c-detail-slider-arrows__arrow--left',
 			disabledClass: 'c-detail-slider-arrows__arrow--disable'
-		},
-		loop: true
+		}
 	});
 	$('.js-menu-button').on('click', function(e){
 		$(e.currentTarget).toggleClass('c-menu-button--active');
