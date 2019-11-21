@@ -3,3 +3,4 @@
 @@include('../libs/select2.full.min.js')
 @@include('../libs/jquery.fancybox.js')
 @@include('../libs/jquery.inputmask.js')
+@@include('../libs/jquery.scrollTo.js')
