@@ -29,7 +29,7 @@
     "imagemin-pngquant": "^7.0.0"
   },
   "dependencies": {
-    "browserslist": "^4.7.2",
+    "browserslist": "^4.16.5",
     "caniuse-lite": "^1.0.30001004",
     "gulp-print": "^5.0.2",
     "gulp-sourcemaps": "^2.6.5"
